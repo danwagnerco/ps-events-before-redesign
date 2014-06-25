@@ -1,26 +1,35 @@
 <%= form_for(@event) do |f| %>
   <p>
-    <%= f.label :name %>
+    <%= f.label :name %></br>
     <%= f.text_field :name, autofocus: true %>
   </p>
   <p>
-    <%= f.label :description %>
+    <%= f.label :description %></br>
     <%= f.text_area :description, cols: 40, rows: 7 %>
   </p>
   <p>
-    <%= f.label :location %>
+    <%= f.label :location %></br>
     <%= f.text_field :location %>
   </p>
   <p>
-    <%= f.label :price %>
+    <%= f.label :price %></br>
     <%= f.number_field :price %>
   </p>
   <p>
-    <%= f.label :starts_at %>
+    <%= f.label :starts_at %></br>
     <%= f.datetime_select :starts_at %>
   </p>
   <p>
-    <%= f.submit %>
+    <%= f.submit %></br>
     <%= link_to "Cancel", events_path %>
+  </p>
+  <p>
+    <%= f.label :image_file_name %></br>
+    <%= f.text_field :image_file_name, size: 30, 
+          placeholder: "GIF, JPG or PNG file name" %>
+  </p>
+  <p>
+    <%= f.label :capacity %></br>
+    <%= f.number_field :capacity %>
   </p>
 <% end %>
